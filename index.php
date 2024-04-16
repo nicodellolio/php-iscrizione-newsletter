@@ -52,6 +52,11 @@ if (isset($email)) {
             left: 25%;
             top: 30px;
         }
+        .credits{
+            ul{
+                list-style: none;
+            }
+        }
     </style>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
@@ -86,7 +91,7 @@ if (isset($email)) {
     </header>
 
 
-    <main>
+    <main class="bg-secondary">
         
         <div class="container-fluid bg-dark p-4">
             <div class="row g-3 mb-3 ">
@@ -148,10 +153,10 @@ if (isset($email)) {
 
         </div>
 
-        <div class="container w-50 mx-auto border text-center m-5 rounded">
+        <div class="container w-50 mx-auto border bg-light text-center mt-3 rounded">
 
             
-            <form action="" method="get">
+            <form class="" action="" method="get">
                 
                 <div class="m-3 text-start">
                     <label for="" class="form-label">Newsletter</label>
@@ -170,7 +175,41 @@ if (isset($email)) {
 
     <footer>
 
+
+        <div class="container-fluid bg-secondary credits pt-5 text-white text-center">
+            <div class="row">
+                <div class="col-4">
+                    <ul>
+                        <li>Lorem.</li>
+                        <li>Lorem.</li>
+                        <li>Lorem.</li>
+                        <li>Lorem.</li>
+                        <li>Lorem.</li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <ul>
+                        <li>Lorem.</li>
+                        <li>Lorem.</li>
+                        <li>Lorem.</li>
+                        <li>Lorem.</li>
+                        <li>Lorem.</li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <ul>
+                        <li>Lorem.</li>
+                        <li>Lorem.</li>
+                        <li>Lorem.</li>
+                        <li>Lorem.</li>
+                        <li>Lorem.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </footer>
+    
 
   
             <script
