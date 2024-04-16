@@ -26,8 +26,8 @@ if (isset($email)) {
 }
 
 
-var_dump($response['message']);
-var_dump($response['outcome'])
+// var_dump($response['message']);
+// var_dump($response['outcome'])
 
 ?>
 
@@ -47,9 +47,9 @@ var_dump($response['outcome'])
 
         <?php if (isset($response)) : ?>
 
-            <div class="alert alert-<?php $response['outcome']; ?>" role="alert">
+            <div class="alert alert-<?= $response['outcome']; ?>" role="alert">
 
-                <h2 class="alert-heading"><?php $response['message']?></h2>
+                <h2 class="alert-heading"><?= $response['message']?></h2>
 
             </div>
 
