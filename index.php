@@ -5,7 +5,6 @@
 //variabile per input email
 
 $email = $_GET['email'];
-
 function checkEmail ($mail){
     
     
@@ -19,6 +18,8 @@ function checkEmail ($mail){
         'message' => "I'm sorry! Type a valid e-mail address.",
         'outcome' => 'danger'
     ];
+    // var_dump($response['message']);
+    // var_dump($response['outcome'])
 };
 
 if (isset($email)) {    
@@ -26,8 +27,6 @@ if (isset($email)) {
 }
 
 
-// var_dump($response['message']);
-// var_dump($response['outcome'])
 
 ?>
 
@@ -39,15 +38,42 @@ if (isset($email)) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <style>
+        header{
+            height: fit-content ;
+            justify-content: space-between;
+        }
+        .logo{
+            img{
+                height: 50px;
+            }
+        }
+        .alert{
+            left: 25%;
+            top: 30px;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 </head>
 
 <body>
-    <header>
+    <header class="d-flex bg-light ms-5">
+        <div class="logo mr-auto py-3">
+            <img class="" src="./assets/img/10505896.png" alt="">
+        </div>
+
+        <nav class="nav fw-bold justify-content-center px-2 me-3 align-items-center">
+            <a class="text-body-tertiary nav-link active" href="#" aria-current="page">Contacts</a>
+            <a class="text-body-tertiary nav-link" href="#">About</a>
+            <a class="text-primary nav-link" target="_blank" href="https://www.google.com">Google</a>
+        </nav>
+        
 
         <?php if (isset($response)) : ?>
 
-            <div class="alert alert-<?= $response['outcome']; ?>" role="alert">
+            <div class="position-fixed alert alert-<?= $response['outcome']; ?>" role="alert">
 
                 <h2 class="alert-heading"><?= $response['message']?></h2>
 
@@ -61,20 +87,83 @@ if (isset($email)) {
 
 
     <main>
-
-
-        <form action="" method="get">
-
-            <div class="m-3">
-                <label for="" class="form-label">Newsletter</label>
-                <input type="text" class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="Type a valid e-mail address" />
-                <small id="helpId" class="form-text text-muted">Type your e-mail up here to be updated on any news!</small>
+        
+        <div class="container-fluid bg-dark p-4">
+            <div class="row g-3 mb-3 ">
+                <div class="col-4">
+                    <div class="card">
+                        <img class="w-100" src="./assets/img/obama.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img class="w-100" src="./assets/img/obama.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img class="w-100" src="./assets/img/obama.webp" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-4">
+                    <div class="card">
+                        <img class="w-100" src="./assets/img/obama.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img class="w-100" src="./assets/img/obama.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img class="w-100" src="./assets/img/obama.webp" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3 mt-1 bg-secondary p-3">
+                <div class="col-3">
+                    <div class="card">
+                        <img class="w-100" src="./assets/img/yamcha.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img class="w-100" src="./assets/img/yamcha.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img class="w-100" src="./assets/img/yamcha.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img class="w-100" src="./assets/img/yamcha.jpeg" alt="">
+                    </div>
+                </div>
             </div>
 
-            <button class="m-3" type="submit">Send it</button>
+        </div>
 
-        </form>
+        <div class="container w-50 mx-auto border text-center m-5 rounded">
 
+            
+            <form action="" method="get">
+                
+                <div class="m-3 text-start">
+                    <label for="" class="form-label">Newsletter</label>
+                    <input type="text" class="form-control" name="email" id="email" aria-describedby="helpId" />
+                    <small id="helpId" class="form-text text-muted">Type your e-mail up here to be updated on any news!</small>
+                </div>
+                
+                <button class="m-2 btn btn-primary px-5" type="submit">Send it</button>
+                
+            </form>
+            
+        </div>
 
     </main>
 
